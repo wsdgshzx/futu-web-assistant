@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+    /* 高亮样式 */
+    *{font-size:12px;}
+    pre {word-break:break-all;}
+    .val {color:#000080;} /* true|false|null|undefined|NaN */
+    .kwd {color:#A355B9;font:bold 12px 'comic sans ms', sans-serif;} /* 关键词 */
+    .obj {color:#000080;background-color:#FFFF73;} /* 警告颜色 */
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#4188c9" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+
+    <title>日志查看</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext" />
+    <script src="./assets/js/require.min.js"></script>
+    <!-- <script>
+        requirejs.config({
+            baseUrl: '.'
+        });
+    </script> -->
+    <!-- Dashboard Core -->
+    <link href="./assets/css/dashboard.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./assets/js/dashboard.js"></script>
+    <!-- c3.js Charts Plugin -->
+    <link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <script src="./assets/plugins/charts-c3/plugin.js"></script>
+</head>
+<body>
+
+<!-- <ul id="myTab" class="nav nav-tabs">
+	<li class="active"><a href="#F3CLog_395065_2018_10_26" data-toggle="tab">F3CLog_395065_2018_10_26</a></li>
+	<li><a href="#GTWLog_395065_2018_10_26" data-toggle="tab">GTWLog_395065_2018_10_26</a></li>
+	<li><a href="#java" data-toggle="tab">java</a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="F3CLog_395065_2018_10_26">
+		<p><pre id="regdemon">
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 1, enMktType = 1, enMktState = 6
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 2, enMktType = 1, enMktState = 6
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 3, enMktType = 1, enMktState = 6
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 4, enMktType = 1, enMktState = 6
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 5, enMktType = 5, enMktState = 0
+10-26 00:00:02(1540483202) | 22364 | F3C | Info | Other | NNBiz_KeepAlive::OMEvProc, SendHeartBeat, enConnType = 1, nCmdID = 1003, nReqKey = 3425339042508803943
+10-26 00:00:02(1540483202) | 22364 | F3C | Debug | -- | OnReply_HeartBeat, RegulateSvrTime, nSvrTime = 1540483202
+10-26 00:00:02(1540483202) | 22364 | F3C | Info | Login | OnReply_HeartBeat, bReqKeyMatch = 1, enConnType = 1 nReqKey=3425339042508803943 nSenderID=797523894 nSerialNo=233319 enProtoRet=0
+BlockingStateThread 0 class OMTcpServerImpl 10536
+BlockingStateThread 0 class OMTcpServerImpl 17484
+10-26 00:00:22(1540483223) | 22364 | F3C | Info | Other | NNBiz_KeepAlive::OMEvProc, SendHeartBeat, enConnType = 2, nCmdID = 6003, nReqKey = 5483107472304510410
+10-26 00:00:22(1540483223) | 22364 | F3C | Debug | -- | OnReply_HeartBeat, RegulateSvrTime, nSvrTime = 1540483222
+10-26 00:00:22(1540483223) | 22364 | F3C | Info | Login | OnReply_HeartBeat, bReqKeyMatch = 1, enConnType = 2 nReqKey=5483107472304510410 nSenderID=1276635442 nSerialNo=5578 enProtoRet=0
+10-26 00:00:30(1540483230) | 22364 | F3C | Info | Other | NNBiz_KeepAlive::OMEvProc, SendHeartBeat, enConnType = 1, nCmdID = 1003, nReqKey = 3425339042508804001
+10-26 00:00:30(1540483230) | 22364 | F3C | Debug | -- | OnReply_HeartBeat, RegulateSvrTime, nSvrTime = 1540483230
+10-26 00:00:30(1540483230) | 22364 | F3C | Info | Login | OnReply_HeartBeat, bReqKeyMatch = 1, enConnType = 1 nReqKey=3425339042508804001 nSenderID=797523894 nSerialNo=233377 enProtoRet=0
+BlockingStateThread 0 class OMTcpServerImpl 10536
+BlockingStateThread 0 class OMTcpServerImpl 17484
+10-26 00:00:51(1540483252) | 22364 | F3C | Info | Other | NNBiz_KeepAlive::OMEvProc, SendHeartBeat, enConnType = 2, nCmdID = 6003, nReqKey = 5483107472304510411
+10-26 00:00:51(1540483252) | 22364 | F3C | Debug | -- | OnReply_HeartBeat, RegulateSvrTime, nSvrTime = 1540483251
+10-26 00:00:51(1540483252) | 22364 | F3C | Info | Login | OnReply_HeartBeat, bReqKeyMatch = 1, enConnType = 2 nReqKey=5483107472304510411 nSenderID=1276635442 nSerialNo=5579 enProtoRet=0
+10-26 00:00:58(1540483258) | 22364 | F3C | Info | Other | NNBiz_KeepAlive::OMEvProc, SendHeartBeat, enConnType = 1, nCmdID = 1003, nReqKey = 3425339042508804059
+10-26 00:00:58(1540483258) | 22364 | F3C | Debug | -- | OnReply_HeartBeat, RegulateSvrTime, nSvrTime = 1540483258
+10-26 00:00:58(1540483258) | 22364 | F3C | Info | Login | OnReply_HeartBeat, bReqKeyMatch = 1, enConnType = 1 nReqKey=3425339042508804059 nSenderID=797523894 nSerialNo=233435 enProtoRet=0
+BlockingStateThread 0 class OMTcpServerImpl 10536
+</pre></p>
+	</div>
+	<div class="tab-pane fade" id="GTWLog_395065_2018_10_26">
+		<p><pre id="regdemon">
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 1, enMktType = 1, enMktState = 6
+10-26 00:00:01(1540483201) | 22364 | F3C | Info | Quote | ParseEventNotice_MarketStateInfo, enMktId = 2, enMktType = 1, enMktState = 6
+
+</pre></p>
+	</div>
+<div class="tab-pane fade" id="java">
+		<p><pre id="regdemon">
+
+</pre></p>
+	</div>
+</div>
+
+<script>
+(function(window, undefined) {
+    var _re_js = new RegExp('\\b(NNBiz_KeepAlive)\\b|(.*(Error|Warn).*\n)|[\\s\\S]', 'g');
+
+    function prettify(node) {
+        var code = node.innerHTML.replace(/\r\n|[\r\n]/g, "\n").replace(/^\s+|\s+$/g, "");
+        code = code.replace(_re_js, function() {
+            var s, a = arguments;
+            for (var i = 1; i <= 2; i++) {
+                if (s = a[i]) {
+                    s = htmlEncode(s);
+                    switch (i) {
+                        case 1: //关键词 kwd
+                            return '<span class="kwd">' + s + '</span>';
+                        case 2: //内置对象 obj
+                            return '<span class="obj">' + s + '</span>';            
+                    }
+                }
+            }
+            return htmlEncode(a[0]);
+        });
+        return code;
+    }
+
+
+    function htmlEncode(str) {
+        var i, s = {
+                // "&amp;": /&/g,
+                "&quot;": /"/g,
+                "&#039;": /'/g,
+                "&lt;": /</g,
+                "&gt;": />/g,
+                "<br>": /\n/g,
+                // "&nbsp;": / /g, // pre 标签不需要替换空格
+                "&nbsp;&nbsp;": /\t/g
+            };
+        for (i in s) {
+            str = str.replace(s[i], i);
+        }
+        return str;
+    }
+
+    window.prettify = prettify;
+})(window);
+
+var code = document.getElementById("regdemon");
+code.innerHTML = prettify(code);
+</script> -->
+</body>
+</html>
